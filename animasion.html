@@ -6,23 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animasion</title>
     <style>
+        @keyframes sliding {
+            0%{
+                left: 0;
+                top: 0;
+                background-color: greenyellow;
+            }
+            25%{
+                top:325px;
+                background-color:yellow;
+                transform: scale(0.5);
+            }
+            50%{
+                top:0px;
+                background-color:blue;
+                transform: scale(1);
+            }
+            75%{
+                top:325px;
+                background-color:green;
+                transform:scale(0.5)
+            }
+            100%{
+                left: 600px;
+                top: 0;
+                background-color: brown;
+            }
+        }
         .stage{
-            width: 500px;
-            height: 300px;
+            width: 700px;
+            height: 400px;
             background-color: aqua;
         }
         .ball{
             width: 100px;
             height: 100px;
-            background-color: gold;
-            border-radius:50%;
+            background-color:gold;
+            border-radius: 50%;
+            position: relative;
+           animation: sliding 2s ease-in-out 0.5s infinite alternate ;
+           animation-play-state: running;
         }
     </style>
 </head>
 <body>
-    <h1>Let's explore Animasion</h1>
+    <h2>Let's explore Animasion</h2>
     <div class="stage">
         <div class="ball"></div>
     </div>
 </body>
+
 </html>
